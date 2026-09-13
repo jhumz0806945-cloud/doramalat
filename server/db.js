@@ -18,20 +18,29 @@
 // si un `require()` de nivel superior lanza una excepción.
 const path = require("node:path");
 const fs = require("node:fs");
-const { createClient } = require("@libsql/client");
 const { SERIES } = require("./data/series");
 
 function buildClient() {
   const url = process.env.TURSO_DATABASE_URL;
   const authToken = process.env.TURSO_AUTH_TOKEN;
-  if (url) return createClient({ url, authToken });
 
   if (process.env.VERCEL) {
-    throw new Error(
-      "Faltan TURSO_DATABASE_URL / TURSO_AUTH_TOKEN. En Vercel el sistema de archivos no persiste, así que " +
-        "no hay una base de datos local de respaldo — configura esas variables de entorno en el proyecto y vuelve a desplegar."
-    );
+    if (!url) {
+      throw new Error(
+        "Faltan TURSO_DATABASE_URL / TURSO_AUTH_TOKEN. En Vercel el sistema de archivos no persiste, así que " +
+          "no hay una base de datos local de respaldo — configura esas variables de entorno en el proyecto y vuelve a desplegar."
+      );
+    }
+    // Build "/web": cliente 100% JS (sin binario nativo) hecho para runtimes
+    // serverless/edge. El build por defecto de @libsql/client arrastra un
+    // binario nativo para el modo de archivo local que no siempre carga bien
+    // en el sandbox de las funciones de Vercel — con /web se evita del todo.
+    const { createClient } = require("@libsql/client/web");
+    return createClient({ url, authToken });
   }
+
+  const { createClient } = require("@libsql/client");
+  if (url) return createClient({ url, authToken });
 
   const dataDir = path.join(__dirname, "..", "data");
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
