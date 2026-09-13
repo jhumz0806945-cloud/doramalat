@@ -1,1 +1,7 @@
 .claude/scheduled_tasks.lock
+
+# Backend (Node) — solo la carpeta de datos en tiempo de ejecución en la raíz
+# (base SQLite + secreto de sesión); server/data/series.js SÍ se versiona.
+node_modules/
+/data/
+npm-debug.log*

@@ -6,6 +6,12 @@
       "runtimeExecutable": "powershell.exe",
       "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "server.ps1", "-Port", "5500"],
       "port": 5500
+    },
+    {
+      "name": "doramalat-api",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+      "runtimeArgs": ["server/index.js"],
+      "port": 5600
     }
   ]
 }

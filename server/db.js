@@ -1,0 +1,88 @@
+const path = require("node:path");
+const fs = require("node:fs");
+const { DatabaseSync } = require("node:sqlite");
+const { SERIES } = require("./data/series");
+
+const DATA_DIR = path.join(__dirname, "..", "data");
+if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+
+const DB_PATH = path.join(DATA_DIR, "doramalat.db");
+const db = new DatabaseSync(DB_PATH);
+
+db.exec(`
+  PRAGMA journal_mode = WAL;
+
+  CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email TEXT NOT NULL UNIQUE,
+    display_name TEXT NOT NULL,
+    password_hash TEXT NOT NULL,
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
+  CREATE TABLE IF NOT EXISTS series (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    slug TEXT NOT NULL UNIQUE,
+    title TEXT NOT NULL,
+    type TEXT NOT NULL,
+    country TEXT NOT NULL,
+    country_label TEXT NOT NULL,
+    genre TEXT NOT NULL,
+    category TEXT,
+    year INTEGER NOT NULL,
+    rating REAL,
+    meta TEXT,
+    synopsis TEXT NOT NULL,
+    poster TEXT NOT NULL,
+    watch_url TEXT NOT NULL,
+    trailer TEXT
+  );
+
+  CREATE TABLE IF NOT EXISTS favorites (
+    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    series_id INTEGER NOT NULL REFERENCES series(id) ON DELETE CASCADE,
+    created_at TEXT NOT NULL DEFAULT (datetime('now')),
+    PRIMARY KEY (user_id, series_id)
+  );
+`);
+
+// Seed / re-sync the catalog on every boot so edits to server/data/series.js
+// show up without needing a manual migration step. Users and favorites are
+// never touched here.
+const upsertSeries = db.prepare(`
+  INSERT INTO series (slug, title, type, country, country_label, genre, category, year, rating, meta, synopsis, poster, watch_url, trailer)
+  VALUES (@slug, @title, @type, @country, @countryLabel, @genre, @category, @year, @rating, @meta, @synopsis, @poster, @watchUrl, @trailer)
+  ON CONFLICT(slug) DO UPDATE SET
+    title=excluded.title, type=excluded.type, country=excluded.country, country_label=excluded.country_label,
+    genre=excluded.genre, category=excluded.category, year=excluded.year, rating=excluded.rating, meta=excluded.meta,
+    synopsis=excluded.synopsis, poster=excluded.poster, watch_url=excluded.watch_url, trailer=excluded.trailer
+`);
+
+const seedTx = db.exec.bind(db);
+db.exec("BEGIN");
+try {
+  for (const item of SERIES) {
+    upsertSeries.run({
+      slug: item.slug,
+      title: item.title,
+      type: item.type,
+      country: item.country,
+      countryLabel: item.countryLabel,
+      genre: item.genre,
+      category: item.category ?? null,
+      year: item.year,
+      rating: item.rating ?? null,
+      meta: item.meta ?? null,
+      synopsis: item.synopsis,
+      poster: item.poster,
+      watchUrl: item.watchUrl,
+      trailer: item.trailer ?? null,
+    });
+  }
+  db.exec("COMMIT");
+} catch (err) {
+  db.exec("ROLLBACK");
+  throw err;
+}
+
+module.exports = { db };
