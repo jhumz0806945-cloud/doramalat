@@ -1,5 +1,5 @@
 const express = require("express");
-const { db } = require("../db");
+const { client } = require("../db");
 
 const router = express.Router();
 
@@ -23,46 +23,57 @@ function rowToJson(row) {
 }
 
 // GET /api/series?q=&genre=&country=&type=&limit=
-router.get("/", (req, res) => {
-  const { q, genre, category, country, type } = req.query;
-  const limit = Math.min(Number(req.query.limit) || 40, 100);
+router.get("/", async (req, res, next) => {
+  try {
+    const { q, genre, category, country, type } = req.query;
+    const limit = Math.min(Number(req.query.limit) || 40, 100);
 
-  const clauses = [];
-  const params = {};
+    const clauses = [];
+    const args = {};
 
-  if (typeof q === "string" && q.trim()) {
-    clauses.push("(title LIKE @q OR synopsis LIKE @q OR genre LIKE @q)");
-    params.q = `%${q.trim()}%`;
-  }
-  if (typeof genre === "string" && genre.trim()) {
-    clauses.push("genre LIKE @genre");
-    params.genre = `%${genre.trim()}%`;
-  }
-  if (typeof category === "string" && category.trim()) {
-    clauses.push("category = @category");
-    params.category = category.trim();
-  }
-  if (typeof country === "string" && country.trim()) {
-    clauses.push("country = @country");
-    params.country = country.trim().toUpperCase();
-  }
-  if (typeof type === "string" && (type === "series" || type === "movie")) {
-    clauses.push("type = @type");
-    params.type = type;
-  }
+    if (typeof q === "string" && q.trim()) {
+      clauses.push("(title LIKE @q OR synopsis LIKE @q OR genre LIKE @q)");
+      args.q = `%${q.trim()}%`;
+    }
+    if (typeof genre === "string" && genre.trim()) {
+      clauses.push("genre LIKE @genre");
+      args.genre = `%${genre.trim()}%`;
+    }
+    if (typeof category === "string" && category.trim()) {
+      clauses.push("category = @category");
+      args.category = category.trim();
+    }
+    if (typeof country === "string" && country.trim()) {
+      clauses.push("country = @country");
+      args.country = country.trim().toUpperCase();
+    }
+    if (typeof type === "string" && (type === "series" || type === "movie")) {
+      clauses.push("type = @type");
+      args.type = type;
+    }
 
-  const where = clauses.length ? `WHERE ${clauses.join(" AND ")}` : "";
-  const rows = db
-    .prepare(`SELECT * FROM series ${where} ORDER BY rating IS NULL, rating DESC, year DESC LIMIT @limit`)
-    .all({ ...params, limit });
+    const where = clauses.length ? `WHERE ${clauses.join(" AND ")}` : "";
+    args.limit = limit;
+    const result = await client.execute({
+      sql: `SELECT * FROM series ${where} ORDER BY rating IS NULL, rating DESC, year DESC LIMIT @limit`,
+      args,
+    });
 
-  res.json({ results: rows.map(rowToJson), count: rows.length });
+    res.json({ results: result.rows.map(rowToJson), count: result.rows.length });
+  } catch (err) {
+    next(err);
+  }
 });
 
-router.get("/:slug", (req, res) => {
-  const row = db.prepare("SELECT * FROM series WHERE slug = ?").get(req.params.slug);
-  if (!row) return res.status(404).json({ error: "No encontramos esa reseña." });
-  res.json({ series: rowToJson(row) });
+router.get("/:slug", async (req, res, next) => {
+  try {
+    const result = await client.execute({ sql: "SELECT * FROM series WHERE slug = @slug", args: { slug: req.params.slug } });
+    const row = result.rows[0];
+    if (!row) return res.status(404).json({ error: "No encontramos esa reseña." });
+    res.json({ series: rowToJson(row) });
+  } catch (err) {
+    next(err);
+  }
 });
 
 module.exports = { router };
