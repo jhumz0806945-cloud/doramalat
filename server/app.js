@@ -2,7 +2,6 @@ const path = require("node:path");
 const express = require("express");
 const cookieParser = require("cookie-parser");
 
-const { ready } = require("./db");
 const { attachUser, router: authRouter } = require("./routes/auth");
 const { router: seriesRouter } = require("./routes/series");
 
@@ -12,19 +11,6 @@ const app = express();
 app.disable("x-powered-by");
 app.use(express.json());
 app.use(cookieParser());
-
-// Garantiza que la migración + siembra del catálogo terminó antes de que
-// cualquier ruta toque la base de datos (una sola vez por arranque / cold
-// start, gracias al memoizado en db.js).
-app.use(async (_req, res, next) => {
-  try {
-    await ready();
-    next();
-  } catch (err) {
-    res.status(503).json({ error: "Base de datos no disponible." });
-    console.error("Fallo al inicializar la base de datos:", err);
-  }
-});
 
 app.use("/api/auth", authRouter);
 app.use("/api/series", seriesRouter);
@@ -44,5 +30,13 @@ if (!process.env.VERCEL) {
 } else {
   app.use((req, res) => res.status(404).json({ error: "Ruta no encontrada." }));
 }
+
+// Manejador de errores final: cualquier excepción de una ruta (incluida una
+// base de datos no configurada en getDb()) llega aquí como JSON legible,
+// en vez de la página de error HTML por defecto de Express.
+app.use((err, _req, res, _next) => {
+  console.error(err);
+  res.status(500).json({ error: err.message || "Error interno del servidor." });
+});
 
 module.exports = app;

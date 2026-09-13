@@ -7,7 +7,15 @@
 //   - Producción (Vercel): con TURSO_DATABASE_URL + TURSO_AUTH_TOKEN
 //     configuradas como variables de entorno, se conecta a una base de
 //     datos Turso real — necesario porque el sistema de archivos de las
-//     funciones serverless de Vercel no persiste entre invocaciones.
+//     funciones serverless de Vercel es de solo lectura (salvo /tmp) y
+//     no persiste entre invocaciones.
+//
+// La conexión y la siembra del catálogo son perezosas (getDb()), nunca
+// código a nivel de módulo: si algo falla (p.ej. faltan las variables de
+// entorno en Vercel), el error queda dentro de una promesa que las rutas
+// pueden atrapar con try/catch y devolver como JSON 500 — en vez de
+// tumbar toda la función serverless en el arranque, que es lo que pasa
+// si un `require()` de nivel superior lanza una excepción.
 const path = require("node:path");
 const fs = require("node:fs");
 const { createClient } = require("@libsql/client");
@@ -18,12 +26,17 @@ function buildClient() {
   const authToken = process.env.TURSO_AUTH_TOKEN;
   if (url) return createClient({ url, authToken });
 
+  if (process.env.VERCEL) {
+    throw new Error(
+      "Faltan TURSO_DATABASE_URL / TURSO_AUTH_TOKEN. En Vercel el sistema de archivos no persiste, así que " +
+        "no hay una base de datos local de respaldo — configura esas variables de entorno en el proyecto y vuelve a desplegar."
+    );
+  }
+
   const dataDir = path.join(__dirname, "..", "data");
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
   return createClient({ url: `file:${path.join(dataDir, "doramalatamp.db")}` });
 }
-
-const client = buildClient();
 
 const SCHEMA_SQL = [
   `CREATE TABLE IF NOT EXISTS users (
@@ -67,12 +80,13 @@ const UPSERT_SERIES_SQL = `
     synopsis=excluded.synopsis, poster=excluded.poster, watch_url=excluded.watch_url, trailer=excluded.trailer
 `;
 
-// Memoizado: la migración + siembra del catálogo corre una sola vez por
+// Memoizado: la conexión + migración + siembra corren una sola vez por
 // arranque (o por "cold start" en serverless), no en cada request.
-let readyPromise = null;
-function ready() {
-  if (!readyPromise) {
-    readyPromise = (async () => {
+let dbPromise = null;
+function getDb() {
+  if (!dbPromise) {
+    dbPromise = (async () => {
+      const client = buildClient();
       for (const stmt of SCHEMA_SQL) await client.execute(stmt);
       const batch = SERIES.map((item) => ({
         sql: UPSERT_SERIES_SQL,
@@ -94,9 +108,13 @@ function ready() {
         },
       }));
       await client.batch(batch, "write");
-    })();
+      return client;
+    })().catch((err) => {
+      dbPromise = null; // permite reintentar en la siguiente invocación en vez de quedar rota para siempre
+      throw err;
+    });
   }
-  return readyPromise;
+  return dbPromise;
 }
 
-module.exports = { client, ready };
+module.exports = { getDb };

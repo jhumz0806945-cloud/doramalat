@@ -1,7 +1,7 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const { client } = require("../db");
+const { getDb } = require("../db");
 const { getJwtSecret } = require("../secret");
 
 const JWT_SECRET = getJwtSecret();
@@ -11,18 +11,21 @@ const COOKIE_MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000; // 30 días
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 async function findUserByEmail(email) {
-  const r = await client.execute({ sql: "SELECT * FROM users WHERE email = @email", args: { email } });
+  const db = await getDb();
+  const r = await db.execute({ sql: "SELECT * FROM users WHERE email = @email", args: { email } });
   return r.rows[0] ?? null;
 }
 async function findUserById(id) {
-  const r = await client.execute({
+  const db = await getDb();
+  const r = await db.execute({
     sql: "SELECT id, email, display_name, created_at FROM users WHERE id = @id",
     args: { id },
   });
   return r.rows[0] ?? null;
 }
 async function insertUser(email, displayName, passwordHash) {
-  const r = await client.execute({
+  const db = await getDb();
+  const r = await db.execute({
     sql: "INSERT INTO users (email, display_name, password_hash) VALUES (@email, @displayName, @passwordHash)",
     args: { email, displayName, passwordHash },
   });

@@ -1,5 +1,5 @@
 const express = require("express");
-const { client } = require("../db");
+const { getDb } = require("../db");
 
 const router = express.Router();
 
@@ -25,6 +25,7 @@ function rowToJson(row) {
 // GET /api/series?q=&genre=&country=&type=&limit=
 router.get("/", async (req, res, next) => {
   try {
+    const db = await getDb();
     const { q, genre, category, country, type } = req.query;
     const limit = Math.min(Number(req.query.limit) || 40, 100);
 
@@ -54,7 +55,7 @@ router.get("/", async (req, res, next) => {
 
     const where = clauses.length ? `WHERE ${clauses.join(" AND ")}` : "";
     args.limit = limit;
-    const result = await client.execute({
+    const result = await db.execute({
       sql: `SELECT * FROM series ${where} ORDER BY rating IS NULL, rating DESC, year DESC LIMIT @limit`,
       args,
     });
@@ -67,7 +68,8 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:slug", async (req, res, next) => {
   try {
-    const result = await client.execute({ sql: "SELECT * FROM series WHERE slug = @slug", args: { slug: req.params.slug } });
+    const db = await getDb();
+    const result = await db.execute({ sql: "SELECT * FROM series WHERE slug = @slug", args: { slug: req.params.slug } });
     const row = result.rows[0];
     if (!row) return res.status(404).json({ error: "No encontramos esa reseña." });
     res.json({ series: rowToJson(row) });
