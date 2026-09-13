@@ -1,8 +1,8 @@
 {
-  "name": "doramalat",
+  "name": "doramalatamp",
   "version": "1.0.0",
   "private": true,
-  "description": "DoramaLat — reseñas, tráilers y dónde ver doramas y anime, con cuentas de usuario reales.",
+  "description": "DoramaLatAMP — reseñas, tráilers y dónde ver doramas y anime, con cuentas de usuario reales.",
   "main": "server/index.js",
   "engines": {
     "node": ">=22.5.0"

@@ -28,5 +28,5 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`DoramaLat (backend real) escuchando en http://localhost:${PORT}`);
+  console.log(`DoramaLatAMP (backend real) escuchando en http://localhost:${PORT}`);
 });

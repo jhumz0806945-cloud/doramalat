@@ -1,4 +1,4 @@
-# DoramaLat
+# DoramaLatAMP
 
 Página de reseñas, tráilers y guías de dónde ver (legalmente) doramas, dramas asiáticos y anime, con doblaje y subtítulos en español latino. No aloja ni transmite video — enlaza a plataformas con licencia (Netflix, Viki, Crunchyroll, JustWatch).
 
@@ -15,7 +15,7 @@ npm start
 
 Luego abre [http://localhost:5600](http://localhost:5600).
 
-Al arrancar, `server/index.js` crea automáticamente `data/doramalat.db` (SQLite) con las tablas de usuarios, reseñas y favoritos, y siembra el catálogo desde [`server/data/series.js`](server/data/series.js). La carpeta `data/` no se versiona (contiene la base de datos y el secreto de firma de sesión, generados en el primer arranque).
+Al arrancar, `server/index.js` crea automáticamente `data/doramalatamp.db` (SQLite) con las tablas de usuarios, reseñas y favoritos, y siembra el catálogo desde [`server/data/series.js`](server/data/series.js). La carpeta `data/` no se versiona (contiene la base de datos y el secreto de firma de sesión, generados en el primer arranque).
 
 ### Qué es real hoy
 

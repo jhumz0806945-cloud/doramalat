@@ -1,4 +1,4 @@
-// DoramaLat — lógica de cliente: sesión de usuario, buscador, filtros por
+// DoramaLatAMP — lógica de cliente: sesión de usuario, buscador, filtros por
 // género/país y modal de detalle. Habla con la API real en /api/* (server/index.js).
 (() => {
   "use strict";

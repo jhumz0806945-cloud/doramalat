@@ -1,4 +1,4 @@
-// Catálogo de reseñas de DoramaLat. Fuente única de datos: usada para sembrar
+// Catálogo de reseñas de DoramaLatAMP. Fuente única de datos: usada para sembrar
 // la base de datos (server/db.js) y coincide con las tarjetas de index.html
 // mediante `slug` (atributo data-slug en cada tarjeta).
 //
