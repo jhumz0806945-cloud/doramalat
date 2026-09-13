@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-fixed":"#f1dbff","on-primary":"#67001e","surface-container":"#1f1f24","on-error":"#690005","inverse-on-surface":"#2f3035","on-tertiary":"#3f2e00","surface":"#121317","surface-container-lowest":"#0d0e12","primary-container":"#ff5070","on-tertiary-fixed":"#251a00","primary-fixed-dim":"#ffb2b9","surface-container-high":"#292a2e","on-secondary-container":"#d4a5ff","on-background":"#e3e2e8","background":"#121317","surface-dim":"#121317","on-primary-fixed-variant":"#91002e","surface-variant":"#343439","on-secondary-fixed":"#2d0050","primary-fixed":"#ffdadc","on-secondary":"#4a007f","secondary-container":"#6b13af","on-surface":"#e3e2e8","on-primary-container":"#5b0019","surface-container-highest":"#343439","surface-tint":"#ffb2b9","inverse-primary":"#be003f","error-container":"#93000a","outline":"#ac888a","on-secondary-fixed-variant":"#680eac","surface-bright":"#38393e","outline-variant":"#5c3f41","on-tertiary-container":"#372700","on-tertiary-fixed-variant":"#5b4300","inverse-surface":"#e3e2e8","secondary-fixed-dim":"#deb7ff","tertiary":"#edc157","tertiary-fixed":"#ffdf9b","on-primary-fixed":"#40000f","on-error-container":"#ffdad6","primary":"#ffb2b9","tertiary-container":"#b28b26","surface-container-low":"#1a1b20","secondary":"#deb7ff","tertiary-fixed-dim":"#edc157","error":"#ffb4ab","on-surface-variant":"#e6bcbf"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2.5rem","gutter-sm":"0.75rem","gutter":"1.5rem","space-sm":"0.5rem","space-md":"1rem","margin":"3.5rem","space-lg":"1.5rem","space-xs":"0.25rem","margin-mobile":"1rem"},fontFamily:{"body-lg":["Plus Jakarta Sans"],"label-badge":["Outfit"],"body-md":["Plus Jakarta Sans"],"headline-xl":["Outfit"],"headline-md":["Outfit"],"body-sm":["Plus Jakarta Sans"],"label-md":["Outfit"],"display-hero":["Outfit"],"label-lg":["Outfit"],"headline-xl-mobile":["Outfit"],"display-hero-mobile":["Outfit"],"headline-lg":["Outfit"],"headline-sm":["Outfit"]},fontSize:{"body-lg":["18px",{lineHeight:"28px",letterSpacing:"0",fontWeight:"400"}],"label-badge":["10px",{lineHeight:"12px",letterSpacing:"0.08em",fontWeight:"700"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0",fontWeight:"400"}],"headline-xl":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.03em",fontWeight:"600"}],"display-hero":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"800"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-xl-mobile":["26px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}],"display-hero-mobile":["32px",{lineHeight:"38px",letterSpacing:"-0.01em",fontWeight:"800"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-sm":["16px",{lineHeight:"22px",letterSpacing:"0",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.5)]"><div class="h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-space-sm group" data-path="inicio" href="#"><img alt="DoramaLat Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XtgHUCuZANtHKriRj2cPhVloJJFe-nv3hWm5TUg5qyI1dEH_ihhX3rfK246m8ga_gcU-OW0Y3qCWG0TgwFYjGGWXofxj95IQhRTodWC7seiDyGrqyYaB5ScbRePcRParUMG18mRC6hf3sAMAxtoEiuHdeeQ5pbMwH2L2XJ9lYCPQaIJWi1BMDFDkOd6EqhiF2Bjgxu0kF9hXTh9t9ovwQuZtdsczmVoZEkMflBQGH5s_OfA4HUGi4jt6A9"/><span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface group-hover:text-primary transition-colors">Dorama<span class="text-primary">Lat</span></span></a><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-surface-container-high text-primary font-bold rounded-lg px-space-sm py-space-xs"><a aria-current="page" class="transition-colors bg-surface-container-high text-primary font-bold rounded-lg px-space-sm py-space-xs" data-path="inicio" href="#">Inicio</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="generos" href="#">Géneros</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="paises" href="#">Países</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="estado" href="#">Estado</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="mas-vistos" href="#">Más Vistos</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="calendario" href="#">Calendario</a></nav></div><div class="flex-1 max-w-xl hidden md:block"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-md text-primary pointer-events-none text-[20px]">search</span><input class="w-full bg-surface-container-low pl-11 pr-space-md py-space-sm rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 outline-none focus:bg-surface-container focus:ring-2 focus:ring-primary/60 transition-all shadow-inner" placeholder="Buscar series, doramas, actores..." type="text"/></div></div><div class="flex items-center gap-space-sm shrink-0"><a class="flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-gradient-to-r from-primary-container to-secondary-container text-on-surface font-label-lg text-label-lg font-bold shadow-[0_0_16px_rgba(255,80,112,0.4)] hover:shadow-[0_0_24px_rgba(255,80,112,0.6)] hover:scale-105 transition-all" data-path="planes-premium" href="#"><span class="material-symbols-outlined text-tertiary text-[18px]">hotel_class</span><span class="hidden sm:inline">Hazte Premium</span><span class="sm:hidden">VIP</span></a><a class="hidden lg:flex items-center px-space-md py-space-sm rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-lg text-label-lg transition-colors" data-path="iniciar-sesion" href="#">Iniciar Sesión / Registro</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 cursor-pointer shadow-sm hover:ring-2 hover:ring-primary/50 transition-all"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface flex-1"><div class="flex flex-col w-full text-on-surface">
+<!-- 1. BANNER SUPERIOR DELGADO CERRABLE -->
+<aside class="w-full bg-gradient-to-r from-surface-container-lowest via-surface-container-high to-surface-container-lowest py-space-sm px-margin-mobile lg:px-margin relative overflow-hidden transition-all duration-300" id="top-promo-banner">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm text-center sm:text-left min-w-0">
+<span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-container text-on-surface shadow-md">
+<span class="material-symbols-outlined text-[16px] text-primary">bolt</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface truncate">
+<strong class="text-primary font-headline-sm font-bold">OFERTA DE LANZAMIENTO:</strong>
+          Plan VIP con <span class="text-tertiary font-bold">50% OFF</span> — Disfruta tus K-dramas favoritos sin cortes publicitarios.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<a class="px-space-md py-1 rounded-full bg-gradient-to-r from-primary-container to-secondary-container text-on-surface font-label-md text-label-md font-bold tracking-wide shadow-md hover:scale-105 transition-all" href="#vip-pricing-section">
+          Reclamar Oferta
+        </a>
+<button aria-label="Cerrar banner" class="h-6 w-6 rounded-full bg-surface-container hover:bg-surface-variant flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" onclick="document.getElementById('top-promo-banner').style.display='none'">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- 2. HERO PRINCIPAL CINEMÁTICO -->
+<section class="relative w-full min-h-[640px] lg:min-h-[780px] -mt-20 pt-28 pb-space-xl flex items-center overflow-hidden">
+<!-- Visual Backdrop Scrim & Imagery -->
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="Cinematic still from high fantasy Korean romance drama at midnight. Two ethereal protagonists standing under a massive glowing crescent moon amid floating luminous petals and ancient palace towers. Rich crimson and electric violet atmosphere, ultra photorealistic film grain." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXjlE20nzLv1PcHRdxLCSePO8y1K1CeZw-UYf2jsacT5K8Xoem2yG7XAIybEhIjHSViPQM7tXFFZGqjvfQkNrsMBmjkYjfeziW-CjcWU4RkG676ruIxb5Zo7oEHlU_QStXKGE_yKkQOj58bB2WKbiSdvW0WtBERWIR3Bn9LAtbHnkyD_alLitq0ZcmqKjOyrmoz3UIAuuzbmBl1QBBDXKgmUWnpUY2YY_VNOfREz66nJzuWl93atXR1A')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/75 to-surface/40"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/85 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile lg:px-margin max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
+<!-- Info Left Block -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-primary-container text-on-surface font-label-badge text-label-badge font-bold tracking-wider uppercase shadow-[0_0_12px_rgba(255,80,112,0.4)]">
+<span class="material-symbols-outlined text-[13px] text-primary">local_fire_department</span> #1 En Tendencia Hoy
+          </span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high/80 backdrop-blur-md text-secondary font-label-badge text-label-badge font-bold uppercase">
+            Temporada Final
+          </span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high/80 backdrop-blur-md text-on-surface-variant font-label-badge text-label-badge">
+            1080p Full HD
+          </span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high/80 backdrop-blur-md text-tertiary font-label-badge text-label-badge">
+            Audio Español Latino &amp; Coreano
+          </span>
+</div>
+<h1 class="font-display-hero text-display-hero-mobile lg:text-display-hero font-extrabold tracking-tight text-on-surface max-w-2xl leading-none drop-shadow-md">
+          Amor Bajo la <span class="text-primary">Tormenta Lunar</span>
+</h1>
+<!-- Metadata Ribbon -->
+<div class="flex flex-wrap items-center gap-space-sm font-label-md text-label-md text-on-surface-variant">
+<span class="text-on-surface font-bold">2024</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span>16 Episodios</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="flex items-center gap-0.5 text-tertiary font-bold">
+<span class="material-symbols-outlined text-[16px]">star</span> 9.8
+          </span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="text-on-surface">Romance, Fantasía, Misterio</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span>Corea del Sur 🇰🇷</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface max-w-xl line-clamp-2 leading-relaxed opacity-90">
+          Un príncipe heredero del siglo XVIII y una sagaz detective moderna cruzan un eclipse dimensional para desentrañar una conspiración oscura que amenaza el equilibrio de ambos mundos.
+        </p>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-gradient-to-r from-primary-container to-secondary-container text-on-surface font-headline-sm text-headline-sm font-bold shadow-[0_0_24px_rgba(255,80,112,0.45)] hover:shadow-[0_0_32px_rgba(255,80,112,0.7)] hover:scale-105 transition-all" href="#">
+<span class="material-symbols-outlined text-[22px]">play_arrow</span> Ver Ahora - Ep. 1
+          </a>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-container-high/80 backdrop-blur-md hover:bg-surface-variant text-on-surface font-label-lg text-label-lg transition-all shadow-md">
+<span class="material-symbols-outlined text-[20px] text-primary">info</span> Más Información
+          </button>
+<button class="h-11 w-11 rounded-full bg-surface-container-high/80 backdrop-blur-md hover:bg-surface-variant flex items-center justify-center text-on-surface transition-all shadow-md group" title="Añadir a Mi Lista">
+<span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">bookmark_add</span>
+</button>
+</div>
+</div>
+<!-- Quick Episode Switcher Rail (Right Margin) -->
+<div class="lg:col-span-4 hidden lg:flex flex-col gap-space-sm bg-surface-container/60 backdrop-blur-xl p-space-md rounded-xl shadow-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-lg text-label-lg font-bold text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">playlist_play</span> Capítulos Populares
+          </span>
+<span class="font-label-badge text-label-badge text-primary uppercase">Emisión Finalizada</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm p-space-xs rounded-lg bg-surface-container-high hover:bg-surface-variant cursor-pointer transition-all">
+<div class="w-16 h-10 rounded bg-cover bg-center shrink-0 relative overflow-hidden" data-alt="Miniature dramatic scene of Korean drama episode 1 with rain reflection." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_DoienDdCq-hEB5-KOGRiheUZOKd-6oh6b9YHeJDxtOHHfayCRg42RnHcWS4gg9wdjNlGwmxVQw_kmNuTpzcmYArGjxfaptwPjJjyL-mB9J0R-oOHidND6SXhn_Bl6dcTrGHwawzozPQBrgd3je6qrsHlgzSojGHMGzhow-Bbg_w5AKxNQa-tKPFQQqSWKhlDObEytknt5gTe5xATqlyfUnyrZYrXqmzUVfZQR5TCfhkYw-k7gjiOHA')">
+<span class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-on-surface">play_circle</span>
+</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="font-headline-sm text-body-sm font-semibold text-on-surface truncate">E1: La Grieta Temporal</p>
+<p class="font-body-sm text-label-badge text-on-surface-variant">68 min • Doblaje Latino</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high cursor-pointer transition-all">
+<div class="w-16 h-10 rounded bg-cover bg-center shrink-0 relative overflow-hidden" data-alt="Intense close-up of historical Korean scholar in midnight court room." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1Fm4u0y72KUo4qd2SeWPaCN9bOhNiYom9IZYZ0tMsPxwYXS_z_K3X28Nyw_dcpRrBEvr3UK8XTDy1JvUj7-GQowxVKJzjZAq3NSr2bq1UoQY-jWVGkfkNyNB2ynkc6J_ZoneFKsGQhE4DzwU8CMCGCz30wcOW41Ljf-BddRQduEAloFHBWYrMaedlpNZC8Zndi9iegDwxf347vz47fmhYHR6S1Reu4ZcXCr45aMRopEYHnyFkwkmf0Q')"></div>
+<div class="min-w-0 flex-1">
+<p class="font-headline-sm text-body-sm font-semibold text-on-surface truncate">E2: El Sello del Destino</p>
+<p class="font-body-sm text-label-badge text-on-surface-variant">72 min • Subtitulado</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high cursor-pointer transition-all">
+<div class="w-16 h-10 rounded bg-cover bg-center shrink-0 relative overflow-hidden" data-alt="Emotional reunion scene under cherry blossoms at twilight in Seoul." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEjLmOEEEQJFvQqMl1zob5naeoWwLe_iAHyffbS64QD86PDz4Ihn3pncsL1JKV3bnvXntmw2EVkO3tX1QCxoQaqA8T7pYNluhCDHxQZtghSaCP8sIKppqhZh0obtIfUPeWbe1ysc45Ig5-q81UjGQ21ZxSgIsqmK8_-a3wUOfXn8OwP5EnRVLYufDJqOvP6TUByEz0Vib15QlGiTG56gKA4ogdZnKX_jTXbmZJM-gmYFpbBrKvJODVOg')"></div>
+<div class="min-w-0 flex-1">
+<p class="font-headline-sm text-body-sm font-semibold text-on-surface truncate">E3: Recuerdos del Futuro</p>
+<p class="font-body-sm text-label-badge text-on-surface-variant">65 min • Doblaje Latino</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SECCIÓN 'CONTINUAR VIENDO' -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl max-w-7xl mx-auto">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-tertiary font-bold">Sesión Activa</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">
+          Continuar Viendo <span class="text-body-md font-body-md text-on-surface-variant font-normal">| Bienvenido de nuevo, Carlos (VIP activo)</span>
+</h2>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline self-start sm:self-auto flex items-center gap-1" href="#">
+        Historial Completo <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="group relative rounded-xl bg-surface-container overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+<div class="relative w-full aspect-video bg-cover bg-center overflow-hidden" data-alt="High quality shot of Korean high school romantic drama scene with stylish main characters talking under soft afternoon sunlight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFwiDpIc_J5zGu_-flDgQL29VlhWsXMN79cSDXK5jj3GNAdplpzQ8OQfSxaH2GwC5L4eEWBgCTbbSmbiLHDYbyvjIxeJEh_nRgacw7BPSDzkik96x43wmIt4Didiq7KsZCF36VH63baA7M-tZSQGRbJdPRDVkMfkvS4X8L6pnfEFNWIddm_5r7CN2ymuDYBt367FRiNFvGjCgC2Uq5hWvG2MQMDkYdtUkyNPyqx_KWYOdsdMaq14mung')">
+<div class="absolute top-2 left-2 flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-badge text-label-badge font-bold">DOBLAJE LATINO</span>
+</div>
+<span class="absolute top-2 right-2 text-label-badge font-label-badge text-on-surface bg-surface-container-high/80 backdrop-blur-md px-1.5 py-0.5 rounded">🇰🇷 KR</span>
+<!-- Play Trigger Hover Button -->
+<div class="absolute inset-0 bg-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="h-12 w-12 rounded-full bg-primary-container text-on-surface flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">play_arrow</span>
+</button>
+</div>
+<!-- Progress Bar at Base -->
+<div class="absolute bottom-0 left-0 w-full h-1.5 bg-surface-variant">
+<div class="h-full bg-primary-container" style="width: 65%;"></div>
+</div>
+</div>
+<div class="p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface truncate">Belleza Verdadera</h3>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Faltan 18m</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">T1:E12 • El secreto develado</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative rounded-xl bg-surface-container overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+<div class="relative w-full aspect-video bg-cover bg-center overflow-hidden" data-alt="Romantic Korean office drama scene with luxury penthouse setting and two leads in sleek formal suits holding documents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDw4JrILi1j3pNRrOrgAvBMDs9lI0MXrfREXafh7gi6fe8nChc_MmziHFoaJCXv6SN86ZANA-wpkAoa9tjzbaVvP9Z_OlRMqmoJV6Xm8Ae2vi3yg6l_C7upuna5YHNBDCIUMQ2TmcAsm3acLvb6MY3gbinlJSSWkQT247rLAJztobSzLgNENCoWX089mt0tcUJOE-g6EaUqVatFv8_k6EdLEjCN88IlNR5mkU7h1Q4eHOIL8vToexnwIQ')">
+<div class="absolute top-2 left-2 flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-badge text-label-badge font-bold">DOBLAJE LATINO</span>
+</div>
+<span class="absolute top-2 right-2 text-label-badge font-label-badge text-on-surface bg-surface-container-high/80 backdrop-blur-md px-1.5 py-0.5 rounded">🇰🇷 KR</span>
+<div class="absolute inset-0 bg-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="h-12 w-12 rounded-full bg-primary-container text-on-surface flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1.5 bg-surface-variant">
+<div class="h-full bg-primary-container" style="width: 82%;"></div>
+</div>
+</div>
+<div class="p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface truncate">Propuesta Laboral</h3>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Faltan 32m</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">T1:E6 • La cita inesperada</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative rounded-xl bg-surface-container overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+<div class="relative w-full aspect-video bg-cover bg-center overflow-hidden" data-alt="Epic modern fantasy drama screenshot with towering glass portals and majestic white stallion in a bamboo forest at dusk." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyIom7z22sYwPFyssL5R7cp5PobzDTWis2y-gUO9FjX_sSe2ZpkSC1zPQliIWwY9sK6PH6Sab3PITFB4dEtOKdtN7i6WHIfdowbk6c6miiBkGva0WtRocDDHEX4YQC1VX3JLxOvGct41B-5VTAM3i7JuVHnWlAfpMmr3hj4S4XpIxHlZNFpGTAUXqueSChhcIp9W6SWGr1SYi2eaMUdaKg2fuQkvY3zVxbAQvv_2OcDVyUus_ag0FRCQ')">
+<div class="absolute top-2 left-2 flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-badge text-label-badge font-bold">SUB ESPAÑOL</span>
+</div>
+<span class="absolute top-2 right-2 text-label-badge font-label-badge text-on-surface bg-surface-container-high/80 backdrop-blur-md px-1.5 py-0.5 rounded">🇰🇷 KR</span>
+<div class="absolute inset-0 bg-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="h-12 w-12 rounded-full bg-primary-container text-on-surface flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1.5 bg-surface-variant">
+<div class="h-full bg-primary-container" style="width: 25%;"></div>
+</div>
+</div>
+<div class="p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface truncate">El Rey: Monarca Eterno</h3>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Faltan 45m</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">T1:E9 • Entre dos mundos</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative rounded-xl bg-surface-container overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+<div class="relative w-full aspect-video bg-cover bg-center overflow-hidden" data-alt="Tender nostalgic romance drama close-up with soft spring pastel atmosphere and two young students on bicycles in Tokyo." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDmd7C5SLM2cEeVatXI4gdEalR4nsrN9VMY2-2__N3kuBH7xbw21jKjSpCCM9nYdWW9Egc7fZF4S0js5fyOVLNvXkO0IUOUeCG6r92vA8P6JhLDvAfGc_0h860BnP9mLsNPKjc4xOYMnMLWHbj1v9qxUL8fO43Lzvr6rFfkyW-XTHNNsB0RaczLmp9ZWR-bTV4kmjFJsLA0Q4o4_5SDYRuOu1QJFOzQY-SxvyLKXG1UiJDJuk8EUFMssg')">
+<div class="absolute top-2 left-2 flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-badge text-label-badge font-bold">DOBLAJE LATINO</span>
+</div>
+<span class="absolute top-2 right-2 text-label-badge font-label-badge text-on-surface bg-surface-container-high/80 backdrop-blur-md px-1.5 py-0.5 rounded">🇯🇵 JP</span>
+<div class="absolute inset-0 bg-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="h-12 w-12 rounded-full bg-primary-container text-on-surface flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1.5 bg-surface-variant">
+<div class="h-full bg-primary-container" style="width: 78%;"></div>
+</div>
+</div>
+<div class="p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface truncate">Cerezo en Flor</h3>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Faltan 10m</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">T1:E3 • La promesa de abril</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. BANNER DE CONVERSIÓN PLAN PREMIUM DESTACADO -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-lg max-w-7xl mx-auto" id="vip-pricing-section">
+<div class="relative rounded-2xl overflow-hidden bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-lowest p-space-lg lg:p-space-xl shadow-[0_12px_40px_rgba(107,19,175,0.25)]">
+<!-- Decorative Neon Glow Ambient Circles -->
+<div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-secondary-container/30 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded-full bg-tertiary-container/30 text-tertiary font-label-badge text-label-badge font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">workspace_premium</span> Experiencia VIP Exclusiva
+            </span>
+</div>
+<h2 class="font-headline-xl text-headline-xl-mobile lg:text-headline-xl font-extrabold text-on-surface tracking-tight">
+            Pásate a <span class="text-primary">DoramaLat VIP</span> — La experiencia definitiva sin límites
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+            Desbloquea el catálogo asiático más completo de América Latina en glorioso 4K, servidores dedicados y sin ninguna interrupción.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span> 0% Anuncios invasivos
+            </div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span> Calidad Ultra HD 4K y HDR
+            </div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span> Estrenos simultáneos con Asia (24h antes)
+            </div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span> Descargas ilimitadas offline
+            </div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface sm:col-span-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span> 4 Pantallas y perfiles simultáneos
+            </div>
+</div>
+</div>
+<!-- Pricing Right Block -->
+<div class="lg:col-span-5 flex flex-col items-center justify-center p-space-lg rounded-xl bg-surface-container-lowest/80 backdrop-blur-xl shadow-2xl text-center">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary font-bold mb-1">Mejor Valor Anual</span>
+<div class="flex items-baseline gap-1 my-1">
+<span class="font-display-hero text-headline-xl lg:text-display-hero font-extrabold text-on-surface">$4.99</span>
+<span class="font-body-md text-body-md text-on-surface-variant">USD / mes</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium mb-space-md">
+            o <strong class="text-tertiary">$39.99/año</strong> (Ahorra un 35% en pago anual)
+          </p>
+<a class="w-full py-space-sm px-space-md rounded-full bg-gradient-to-r from-primary-container via-secondary-container to-primary-container text-on-surface font-headline-sm text-headline-sm font-bold shadow-[0_0_24px_rgba(255,80,112,0.5)] hover:shadow-[0_0_32px_rgba(255,80,112,0.8)] hover:scale-105 transition-all text-center" href="#">
+            ¡Hazte Premium Ahora!
+          </a>
+<span class="font-label-badge text-label-badge text-on-surface-variant mt-space-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Cancela en cualquier momento sin penalizaciones
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SECCIÓN 'CATEGORÍAS POPULARES' Y FILTROS POR PAÍS -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Explora por Géneros &amp; Países</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sumérgete en la cultura asiática según tu estado de ánimo o país de origen favorito.</p>
+</div>
+<!-- Country Filters Pill Bar -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-2 scrollbar-none">
+<button class="px-space-md py-2 rounded-full bg-primary-container text-on-surface font-label-md text-label-md font-bold whitespace-nowrap shadow-md flex items-center gap-1.5">
+<span>🇰🇷</span> Corea del Sur (K-Drama)
+      </button>
+<button class="px-space-md py-2 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors flex items-center gap-1.5">
+<span>🇨🇳</span> China (C-Drama)
+      </button>
+<button class="px-space-md py-2 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors flex items-center gap-1.5">
+<span>🇯🇵</span> Japón (J-Drama / Anime)
+      </button>
+<button class="px-space-md py-2 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors flex items-center gap-1.5">
+<span>🇹🇼</span> Taiwán
+      </button>
+<button class="px-space-md py-2 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors flex items-center gap-1.5">
+<span>🇹🇭</span> Tailandia (Lakorn)
+      </button>
+</div>
+<!-- Thematic Category Cards Bento -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-sm">
+<a class="group p-space-md rounded-xl bg-gradient-to-br from-surface-container to-surface-container-low hover:from-surface-container-high hover:to-surface-container flex flex-col justify-between min-h-[140px] shadow-md transition-all" href="#">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Romance Juvenil</h3>
+<p class="font-label-badge text-label-badge text-on-surface-variant">142 Títulos</p>
+</div>
+</a>
+<a class="group p-space-md rounded-xl bg-gradient-to-br from-surface-container to-surface-container-low hover:from-surface-container-high hover:to-surface-container flex flex-col justify-between min-h-[140px] shadow-md transition-all" href="#">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/30 flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">castle</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Fantasía (Sageuk)</h3>
+<p class="font-label-badge text-label-badge text-on-surface-variant">88 Títulos</p>
+</div>
+</a>
+<a class="group p-space-md rounded-xl bg-gradient-to-br from-surface-container to-surface-container-low hover:from-surface-container-high hover:to-surface-container flex flex-col justify-between min-h-[140px] shadow-md transition-all" href="#">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">visibility_off</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Thriller &amp; Venganza</h3>
+<p class="font-label-badge text-label-badge text-on-surface-variant">95 Títulos</p>
+</div>
+</a>
+<a class="group p-space-md rounded-xl bg-gradient-to-br from-surface-container to-surface-container-low hover:from-surface-container-high hover:to-surface-container flex flex-col justify-between min-h-[140px] shadow-md transition-all" href="#">
+<div class="w-10 h-10 rounded-full bg-secondary-container/40 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">sentiment_very_satisfied</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Comedia Romántica</h3>
+<p class="font-label-badge text-label-badge text-on-surface-variant">160 Títulos</p>
+</div>
+</a>
+<a class="group p-space-md rounded-xl bg-gradient-to-br from-surface-container to-surface-container-low hover:from-surface-container-high hover:to-surface-container flex flex-col justify-between min-h-[140px] shadow-md transition-all" href="#">
+<div class="w-10 h-10 rounded-full bg-secondary-container/40 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">diversity_1</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Boys Love (BL)</h3>
+<p class="font-label-badge text-label-badge text-on-surface-variant">74 Títulos</p>
+</div>
+</a>
+<a class="group p-space-md rounded-xl bg-gradient-to-br from-surface-container to-surface-container-low hover:from-surface-container-high hover:to-surface-container flex flex-col justify-between min-h-[140px] shadow-md transition-all" href="#">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">swords</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Acción Sobrenatural</h3>
+<p class="font-label-badge text-label-badge text-on-surface-variant">61 Títulos</p>
+</div>
+</a>
+</div>
+</section>
+<!-- 6. ESPACIO DE ANUNCIO NATIVO INTEGRADO (300x250 Style / Wide Sleek Banner) -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-sm max-w-7xl mx-auto">
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col md:flex-row items-center justify-between gap-space-md shadow-inner">
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center shrink-0" data-alt="Futuristic high fidelity audio wireless gaming and drama earphones in sleek midnight matte black with glowing purple LED aura." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBU8911ZML41MF00e0AEQ1idYVcru2onZ_BVbre1r4gbQGldrx-83XyrpBwwH3sF0i4B8rMi_fVtL2T7IveTUuGkSTai1PJJptoFDtW59fgtyhKEhnw2CscTm8yRbN9zUQkrJtEe3aWp6FQyheAz1WJNN5_fFRI00wsmR7FpO9w9aZAC4t3BAazXzJqrjH9S_qQJmRCe-fE0wZrHByOJdt-e_rA0NHDEMvDW-NSlpxOoOKwdCtB1Qa5cw')"></div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge text-on-surface-variant/70 uppercase tracking-widest">Publicidad Patrocinada</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-label-badge text-label-badge text-tertiary">Audio Hi-Res</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">SonicPro K-Beat Wireless: Sumérgete en las Bandas Sonoras (OST) de tus Doramas</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cancelación activa de ruido y modo espacial acústico optimizado para voces coreanas.</p>
+</div>
+</div>
+<a class="px-space-md py-space-xs rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md font-bold whitespace-nowrap transition-colors shrink-0" href="#">
+        Conoce Más ↗
+      </a>
+</div>
+</section>
+<!-- 7. SECCIÓN 'ÚLTIMOS EPISODIOS ESTRENADOS' (GRID) -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl max-w-7xl mx-auto">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Últimos Episodios Estrenados</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Recién salidos del horno con traducción profesional y doblajes listos.</p>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" href="#">
+        Ver Todos <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-gutter-sm">
+<!-- Ep Card 1 -->
+<a class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-md hover:-translate-y-1 transition-all" href="#">
+<div class="relative aspect-[2/3] w-full bg-cover bg-center overflow-hidden" data-alt="Vertical movie poster of My Demon fantasy drama showing a striking male protagonist in tailored dark coat under glowing magical embers." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDuLwAu_4JmVzi6wqtfRqMBoMk8XpgfGYJbYEtFtd8CImuYwjKtbvMkpnvN9ghqZhj_w8FUUAcx3eX6ptdh88eQWi3ljBd5liQ-sFtzwfBW2bEMfv5FznE7DOJ0e8hIgZHYnZsbCd4u9OKKzDfxStjB_y2ipx0amzRa4xlJ607YZTwRJOYRXhEvjn4ys27Dc1mzMy0W6P_Ti_3PLpMNtyM2znT_QPLvacK-0LJ1vte6gHI_sqehPM1RFA')">
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-primary-container text-on-surface font-label-badge text-label-badge font-bold">Hace 15 min</span>
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-badge text-label-badge font-semibold">Sub Español</span>
+</div>
+<div class="p-space-xs flex flex-col gap-0.5">
+<span class="font-label-badge text-label-badge text-primary">Episodio 14</span>
+<h4 class="font-headline-sm text-body-sm font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Mi Demonio Favorito</h4>
+<p class="font-body-sm text-label-badge text-on-surface-variant">Corea del Sur 🇰🇷</p>
+</div>
+</a>
+<!-- Ep Card 2 -->
+<a class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-md hover:-translate-y-1 transition-all" href="#">
+<div class="relative aspect-[2/3] w-full bg-cover bg-center overflow-hidden" data-alt="Dark post-apocalyptic monster Korean drama poster with brave survivors armed in crumbling green apartment building." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBB--Ug9gi2gTW4urD6Kp89grdba3Vub6ny3Jj_4fySDmzxc8YOHWbnLXQp0Aiz6On8E1Jy0Q7cmgs9v7ua36DY0YYYsFrAfP74FoB-mOF0_PifxBKH9iIhcU-6BlnT2ApSLiSZqDD_owk4OXzZ3-dQffKJh2BBAnaaYmWClYD-1wlwQd1ucWz11tM4LxSVx6XeBtNwb0Q0bRfEnVW9w0bh70oPrDwhf9YUOZglM2KuPbJkOhRZ0vqgMA')">
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-high/90 text-on-surface font-label-badge text-label-badge font-bold">Hace 2 horas</span>
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-badge text-label-badge font-semibold">Doblaje Latino</span>
+</div>
+<div class="p-space-xs flex flex-col gap-0.5">
+<span class="font-label-badge text-label-badge text-primary">Episodio 8</span>
+<h4 class="font-headline-sm text-body-sm font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Dulce Hogar 3</h4>
+<p class="font-body-sm text-label-badge text-on-surface-variant">Corea del Sur 🇰🇷</p>
+</div>
+</a>
+<!-- Ep Card 3 -->
+<a class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-md hover:-translate-y-1 transition-all" href="#">
+<div class="relative aspect-[2/3] w-full bg-cover bg-center overflow-hidden" data-alt="Revenge romance Korean drama poster featuring confident elegant female heroine in white tailored suit smiling coldly." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADgucjRnW2-5avRpBd-vrxj5hgMQDvI4B3FvyfJzQkTSkRb69LbsEIvytbx9e84tkxtsikXlMdEbNA_cOC09tNF5gWt5PcUoCY35eTNNzU_6qFooe6j_7H2dIGj0-rQq1nh_LVOxblljxD2jXAlg4u_WMpdtwqgep63hE-dohfh0Dqi-u5JIbMA85rVsTyY0_kCPM-yCioYisY6kxRgSzxPgI-tKd9wu7oAsw_q_oLmd4RY3M29p8TsA')">
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-high/90 text-on-surface font-label-badge text-label-badge font-bold">Hace 4 horas</span>
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-badge text-label-badge font-semibold">Sub Español</span>
+</div>
+<div class="p-space-xs flex flex-col gap-0.5">
+<span class="font-label-badge text-label-badge text-primary">Episodio 16 Final</span>
+<h4 class="font-headline-sm text-body-sm font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Cásate con mi Esposo</h4>
+<p class="font-body-sm text-label-badge text-on-surface-variant">Corea del Sur 🇰🇷</p>
+</div>
+</a>
+<!-- Ep Card 4 -->
+<a class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-md hover:-translate-y-1 transition-all" href="#">
+<div class="relative aspect-[2/3] w-full bg-cover bg-center overflow-hidden" data-alt="Period thriller poster set in 1945 Gyeongseong with two protagonists carrying vintage lanterns in ominous military shadows." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzyO4gY7PJmMBISespuZC0DPkbNOxgsdBhOuY0IjOBcMNhtTjuOs8O2OW10iTNJSKiJD13Eh98MaIUuegUwbabfOjt4M0t5pzUc-jLkdC72jkqofsk1vb2V7OT0rOZsdzsf8w1SjD9Iee_Kn9Y-WuYfQ3tcGX0v7lWu9L_N_7U1L5kS_MHM0Bm4lnUbdCrW_Ql9p1CKp-5TXoxVkwUR8OUITJBW1kFysczxk22nNj6gagbOMug3hQu3g')">
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-high/90 text-on-surface font-label-badge text-label-badge font-bold">Hoy</span>
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-badge text-label-badge font-semibold">Doblaje Latino</span>
+</div>
+<div class="p-space-xs flex flex-col gap-0.5">
+<span class="font-label-badge text-label-badge text-primary">Episodio 7</span>
+<h4 class="font-headline-sm text-body-sm font-semibold text-on-surface truncate group-hover:text-primary transition-colors">El Monstruo de Seúl</h4>
+<p class="font-body-sm text-label-badge text-on-surface-variant">Corea del Sur 🇰🇷</p>
+</div>
+</a>
+<!-- Ep Card 5 -->
+<a class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-md hover:-translate-y-1 transition-all" href="#">
+<div class="relative aspect-[2/3] w-full bg-cover bg-center overflow-hidden" data-alt="Touching high-society melodrama poster with beautiful couple standing in majestic German lavender field." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmIS-AOzujplaUBsfAWgiunUkB15iLMrRWOHdGSDW5xoWiL0uNP_mvidbwZD5yc0CV9tg4H6_0SxK-StY04LSQZsersaLaZbBtnDHkCmda6xgFdD0ilz00A_3QWq6j2Cno2uP1WHRiTWUELeDhkIN9J1U6ZX2aDoLI2LbCoq82BWeb_xahbhqabO8C0hZi3ud59S5RwHT4zHcCHk8U4yeXFk7B02EaT7ojLSQOqD5K6NSnRTRSM1OfRg')">
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-high/90 text-on-surface font-label-badge text-label-badge font-bold">Hoy</span>
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-badge text-label-badge font-semibold">Sub Español</span>
+</div>
+<div class="p-space-xs flex flex-col gap-0.5">
+<span class="font-label-badge text-label-badge text-primary">Episodio 12</span>
+<h4 class="font-headline-sm text-body-sm font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Reina de las Lágrimas</h4>
+<p class="font-body-sm text-label-badge text-on-surface-variant">Corea del Sur 🇰🇷</p>
+</div>
+</a>
+<!-- Ep Card 6 -->
+<a class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-md hover:-translate-y-1 transition-all" href="#">
+<div class="relative aspect-[2/3] w-full bg-cover bg-center overflow-hidden" data-alt="Nostalgic youth retro drama poster showing high school girl holding camcorder in 1999 Seoul." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9LGhRvnoWrHBMPfJ0M-OVEP8cU0eeKgKHSpnnXjEZ_fDFnvJG2wp75Vy7nOBQx7APuKA8F4F60Q9CsHWYJz5ObXiuYbmE6LaWDF-vOn-JNK3ymFKBO85W1YxAN0GXn3lOxzP_6iweGYkuo2P2lvfOfE3ueSxHzWbGVG12jeO1BAAeElICgUy2aDnIIaIzzM2IFk_nExDudTxPRk1cURFiiv-Rcrv5IhCtldssRXvpuNhQSZhCt17NIg')">
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-high/90 text-on-surface font-label-badge text-label-badge font-bold">Ayer</span>
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-badge text-label-badge font-semibold">Doblaje Latino</span>
+</div>
+<div class="p-space-xs flex flex-col gap-0.5">
+<span class="font-label-badge text-label-badge text-primary">Episodio Especial</span>
+<h4 class="font-headline-sm text-body-sm font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Una Chica del Siglo XX</h4>
+<p class="font-body-sm text-label-badge text-on-surface-variant">Corea del Sur 🇰🇷</p>
+</div>
+</a>
+</div>
+</section>
+<!-- 8. SECCIÓN 'TOP 10 SERIES MÁS VISTAS DE LA SEMANA' -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl max-w-7xl mx-auto">
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="p-2 rounded-lg bg-primary-container/20 text-primary">
+<span class="material-symbols-outlined text-[24px]">trending_up</span>
+</span>
+<div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Top 5 Series Más Vistas de la Semana</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Las producciones con mayor índice de audiencia en toda la región.</p>
+</div>
+</div>
+<!-- Ranking Cards Grid (1 to 5) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Rank 1 -->
+<div class="relative flex items-end group">
+<span class="font-display-hero text-[100px] leading-none font-black text-outline/30 select-none group-hover:text-primary/50 transition-colors pointer-events-none -mr-6 z-0">1</span>
+<div class="relative z-10 flex-1 rounded-xl overflow-hidden bg-surface-container shadow-xl">
+<div class="aspect-[2/3] w-full bg-cover bg-center" data-alt="High quality vertical artwork for Alchemy of Souls fantasy Korean epic with mystical glowing crystal blade and ornate robes." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbdeBDdNSt7kgkAURzAGkClT6XPaa_QdaUitywFDedXfz_SuiYFTtSbYh7aWP9uWZnFFFLSO86fh-3jc_TFJrZuOQTBbcj1N2qS6Ms1xLH180SdWEiv8ubkX3toOdqwXEU4JSaV1C-2xCglG8uFKV7if6-r2xA4dVxOOGsRBiPD8WeZ90JdcQlZ6RnBvuavkgITbVKkE8HHj5A-mk7fi_CxgZjXnDpT2UR_YMhEjv4ge7AToQGhF7ASA')"></div>
+<div class="p-space-sm flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Alquimia de Almas</h3>
+<div class="flex items-center justify-between text-label-badge font-label-badge text-on-surface-variant">
+<span class="text-tertiary font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px]">star</span> 9.9</span>
+<span>2.4M vistas</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Rank 2 -->
+<div class="relative flex items-end group">
+<span class="font-display-hero text-[100px] leading-none font-black text-outline/30 select-none group-hover:text-primary/50 transition-colors pointer-events-none -mr-6 z-0">2</span>
+<div class="relative z-10 flex-1 rounded-xl overflow-hidden bg-surface-container shadow-xl">
+<div class="aspect-[2/3] w-full bg-cover bg-center" data-alt="Psychological revenge drama poster of The Glory featuring solitary woman standing against stark misty gray landscape." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgh9NUnRv1kmFo9vcddvpBq_Fh2Hy9OCYgVtcC-3BLNv35xjL9JyzDwkyFb78rWwNo0Kk1Qj0Wj3aEMoIeFPkQQcmVppx8yPsCo5LiaZcMkZrWFXvdC-aBB1gtZwbbkDUkKFIV8SE8a-aJBIy6j4Szocp16M9iu3lCkwSfBpd6_cy_B-Vgn0SUQk_0TQXT4YQ7VzF8LDsXC7TV4o9nnwlQQaBVEP9Hskt-e-S4G9d-oeQezQJ79kTsHw')"></div>
+<div class="p-space-sm flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">La Gloria</h3>
+<div class="flex items-center justify-between text-label-badge font-label-badge text-on-surface-variant">
+<span class="text-tertiary font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px]">star</span> 9.7</span>
+<span>1.9M vistas</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Rank 3 -->
+<div class="relative flex items-end group">
+<span class="font-display-hero text-[100px] leading-none font-black text-outline/30 select-none group-hover:text-primary/50 transition-colors pointer-events-none -mr-6 z-0">3</span>
+<div class="relative z-10 flex-1 rounded-xl overflow-hidden bg-surface-container shadow-xl">
+<div class="aspect-[2/3] w-full bg-cover bg-center" data-alt="Romance Korean drama Crash Landing on You poster showing South Korean heiress and North Korean soldier in snow field." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAoIeCbJoMqNx5Vryn88ic72zF_zqItTWgugMVpiOGGoRxRs9wT3HOCI2MiM3andeSx1cvCRqDAap-ZgtoqDGPKLWEcneYhX4yIJfwziP-I5OFMoYv95Cdql8ms7p_m8z1iw1Qs006kVlmSWs8Cx9rAGhOxZjachcwgJR-ZmHWD8V249r5vvq7HWg_irjLrwQbV3Nhp8lcsDjsnX8QKZdfTukZ6r2ZKOjxqpD6Q8OPqa34CaIW9ZrLjEg')"></div>
+<div class="p-space-sm flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Aterrizaje en tu Corazón</h3>
+<div class="flex items-center justify-between text-label-badge font-label-badge text-on-surface-variant">
+<span class="text-tertiary font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px]">star</span> 9.8</span>
+<span>1.8M vistas</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Rank 4 -->
+<div class="relative flex items-end group">
+<span class="font-display-hero text-[100px] leading-none font-black text-outline/30 select-none group-hover:text-primary/50 transition-colors pointer-events-none -mr-6 z-0">4</span>
+<div class="relative z-10 flex-1 rounded-xl overflow-hidden bg-surface-container shadow-xl">
+<div class="aspect-[2/3] w-full bg-cover bg-center" data-alt="High production Chinese historical epic fantasy drama poster with immortal warriors floating above mystical mountaintops." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATDvqRDcerVzXJtRhgRB40R9A9bg07RCCerJcIjdulFa0toyoH0Zd8aA0NNFiQPw_SA1pdC5E_szuaZBNx2PDXTQ919NMDFv1qFQzrjBQqDW585NG7ZJfrT5esrFFq9AZUkAm7GGwGi6DNtTdS6XXY30tDwArpvcVhhsxo-aOhmj4RWxK86wZBCnBjlbGNoIVwkqOdJGH1ecYpZPaVo-cncHjDieG6UsyeI2vfJ1cmO7QyPgYOqs0I5g')"></div>
+<div class="p-space-sm flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Amor entre Hada y Demonio</h3>
+<div class="flex items-center justify-between text-label-badge font-label-badge text-on-surface-variant">
+<span class="text-tertiary font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px]">star</span> 9.6</span>
+<span>1.5M vistas</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Rank 5 -->
+<div class="relative flex items-end group">
+<span class="font-display-hero text-[100px] leading-none font-black text-outline/30 select-none group-hover:text-primary/50 transition-colors pointer-events-none -mr-6 z-0">5</span>
+<div class="relative z-10 flex-1 rounded-xl overflow-hidden bg-surface-container shadow-xl">
+<div class="aspect-[2/3] w-full bg-cover bg-center" data-alt="Legal courtroom drama Extraordinary Attorney Woo poster showing quirky young female attorney surrounded by playful floating blue whales." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYNSvI80n4dIhYY-0DS1EKv7tf6BxKd4HsqZRyhRgL-Vd1lsiFcIhpLOsqPeghD0yXQwmnqzG09wwVLfvySEjyT9wZPThiNMMjipTmCocrEf8xyanOnBzrilHctjXAYxPkwkT4ij1xD8sPfyWz0IcSrbUxFfiI9l-bfnEaiTcRlHUbNS0miN7CvYkLLa_2yvQ_YGnWTBzPS-f1mi8pZgV7-6LDW36B-8XLEDu7jsJ9-3fue4rUKr_a0w')"></div>
+<div class="p-space-sm flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Woo, Abogada Extraordinaria</h3>
+<div class="flex items-center justify-between text-label-badge font-label-badge text-on-surface-variant">
+<span class="text-tertiary font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px]">star</span> 9.7</span>
+<span>1.3M vistas</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. SECCIÓN 'PELÍCULAS ASIÁTICAS DESTACADAS' -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl max-w-7xl mx-auto">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Películas Asiáticas Destacadas</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Grandes obras maestras cinematográficas, ganadoras de premios internacionales.</p>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" href="#">
+        Catálogo de Películas <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Movie 1 -->
+<div class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-lg hover:shadow-2xl transition-all">
+<div class="relative aspect-[2/3] w-full bg-cover bg-center" data-alt="Dark dramatic movie poster for Parasite showing modern luxury mansion garden with enigmatic masked eyes and stone scholar rock." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2OO08k50KMW8eZOSRASzPlgP-0jV9v9hKnj1AKr92XuIN3E38o3hzJsgDQ9KIq93MGIVmzSHTldQxZ5kRUpdj3pOdVugrv6cpuQB1LzMf551WnZX4OP0x0yzFdamwAAwn4tfw-3_c0z6yL9iIs1SIaaflSXtKdzoOBzuLI0FBV9pWPmPeoVthe4vlvbw29bRiSDcQGQI8BoA9ZnRosNXj_IL1BYHSzsRXoO-LLN4nlOKTSpuumwGiSw')">
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-badge text-label-badge">4K ULTRA HD</span>
+<span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-badge text-label-badge">2h 12m</span>
+</div>
+<div class="p-space-sm flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Parásitos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Una familia humilde se infiltra con ingenio en el hogar de una acaudalada dinastía con consecuencias impredecibles.</p>
+</div>
+</div>
+<!-- Movie 2 -->
+<div class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-lg hover:shadow-2xl transition-all">
+<div class="relative aspect-[2/3] w-full bg-cover bg-center" data-alt="Action thriller poster for Train to Busan showing father protecting daughter in blood-stained bullet train car surrounded by zombies." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBV7AxHIvpJ8-dzpsIIYChNRyF8MhlZVJNRSAYqqqxX9PXkDXbdaLASyyIiNnFXP9PNAN9GVC91e7Ii_W1-8csWEphpL-H4NrkrtegaMJYaZjS0hQp5pk5rwkJo6YZkWJW9PPJqs0N0zpzDFvgQ4muxat8M_deKbXz8gY1NfePgGuCh55lbw5JdOPQ2-DJV29nzjPXj-VQut3G4ozcGx7BOikR1HOxgquChIZA6OPWRvP2UCd_ecjtMQ')">
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-badge text-label-badge">FULL HD</span>
+<span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-badge text-label-badge">1h 58m</span>
+</div>
+<div class="p-space-sm flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Tren a Busan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Un brote viral zombi se desata a bordo del tren bala hacia el único refugio seguro en Corea del Sur.</p>
+</div>
+</div>
+<!-- Movie 3 -->
+<div class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-lg hover:shadow-2xl transition-all">
+<div class="relative aspect-[2/3] w-full bg-cover bg-center" data-alt="Atmospheric erotic thriller movie poster for The Handmaiden featuring luxurious Japanese-Korean manor and two secretive women." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAb82gu867UyBTEW3u_FVDl74o3GkakAJ8k1nE0tQBRVYP2y9h4nuIFEvzjs7VnbU3jojCY6qKRvx3L-slTZ6KOdeRpQJphhzQIZ0i51C-GLH-w79J0n0hk_hJwyAwowG9kvY5_6UIMP-7pDWGML_CzdMLfwZdcox3CGOGNeIWcHArnedqAVKp0xDiYAqe5SNrNRXS7RSCfETyxEhpvlEO68Uc5dwCQaw_5kLvQz6gTQYhfRIB5kdnxXg')">
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-badge text-label-badge">4K ULTRA HD</span>
+<span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-badge text-label-badge">2h 25m</span>
+</div>
+<div class="p-space-sm flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">La Doncella</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Una estafadora contratada como sirvienta para una rica heredera japonesa se ve envuelta en un juego de seducción y engaño.</p>
+</div>
+</div>
+<!-- Movie 4 -->
+<div class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-lg hover:shadow-2xl transition-all">
+<div class="relative aspect-[2/3] w-full bg-cover bg-center" data-alt="Nostalgic romantic movie poster showing young girl with retro bicycle against sunny blue sky and cherry trees." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCky-WOF2D6gL7DLu1p4ZfFqyOOwgw1HKgGdBo4ErwTTkUeO6yHJIvqCfjdxBGzxFSCFAY6XQ5bRDQDw8B5O7vq2_FL43zt3cnE2sCOGDVswUgHNkdBK359B3jyV5_57HTWwLGViKGwAur4aAFnTq5PhZ3dqkKIXJUo_QRpLkmFVkvgNoA8MQIfGcVJ6sGa61RAjhLeSAwEE6AkY-POk-bCiX089EVTglfYRxnRQcDzLObWvYskytrDA')">
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-badge text-label-badge">FULL HD</span>
+<span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-badge text-label-badge">2h 01m</span>
+</div>
+<div class="p-space-sm flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Una Chica del Siglo XX</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">En 1999, una adolescente vigila al chico del que su mejor amiga está enamorada, cayendo ella misma en una dulce historia de amor.</p>
+</div>
+</div>
+<!-- Movie 5 -->
+<div class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-lg hover:shadow-2xl transition-all">
+<div class="relative aspect-[2/3] w-full bg-cover bg-center" data-alt="Apocalyptic disaster film poster for Concrete Utopia featuring a single intact apartment building amid a flattened Seoul wasteland." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlgwz6RmyF64Ymm6HUZV-fcWeoDlb8HjnEVJRtNWXEalqc3K-AqtUXcLARRIlf4K0vBqj15TnPco5NvEwyi_2IIR5v_BFCX0R7t_6oNHzLj222aBj65N81oVch128JNmXmD6d3nocan-9AT_KoZuyynsQagx5sMC2xLaGnumVRWvKupCXl9kNr6jrsflKtQXtmnbquGbnnySKrYoVmkB5kyRMvRazZEdj7kesBSpPxZukLjb5h_MEcbw')">
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-badge text-label-badge">4K ULTRA HD</span>
+<span class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-badge text-label-badge">2h 10m</span>
+</div>
+<div class="p-space-sm flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Sobrevivientes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Tras un cataclismo sísmico en Seúl, los residentes del único complejo en pie luchan desesperadamente por sobrevivir.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. SECCIÓN '¿POR QUÉ ELEGIR DORAMALAT?' -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-space-lg">
+<h2 class="font-headline-xl text-headline-xl-mobile lg:text-headline-xl font-extrabold text-on-surface tracking-tight">¿Por Qué Elegir DoramaLat?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">Diseñado por y para la comunidad hispanohablante de doramas en todo el mundo.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="p-space-md rounded-2xl bg-surface-container shadow-lg flex flex-col gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">translate</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Audio y Subtítulos en Latino</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Traducciones fieles al contexto cultural asiático y doblajes oficiales realizados por los mejores talentos de doblaje en Latinoamérica.</p>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container shadow-lg flex flex-col gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">speed</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Sin Cortes Invasivos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reproducción ultra veloz gracias a nuestra red de distribución global (CDN) con servidores dedicados para streaming sin lag ni pausas.</p>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container shadow-lg flex flex-col gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[28px]">update</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Capítulos Simultáneos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Transmisiones el mismo día de emisión en cadenas de televisión de Corea (tvN, JTBC, SBS), China y Japón con subtitulado exprés.</p>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container shadow-lg flex flex-col gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">cloud_download</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Calidad Full HD y 4K HDR</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Inmersión visual cinematográfica con bitrate sin comprimir y soporte para sonido envolvente Dolby en dispositivos compatibles.</p>
+</div>
+</div>
+</section>
+<!-- 11. SECCIÓN 'RECOMENDADO PARA TI - TIENDA Y AFILIADOS' -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl max-w-7xl mx-auto">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-secondary font-bold">Merchandising &amp; Experiencias</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Enlaces de Afiliado</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Para los Verdaderos Fans de Asia</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Compras seguras garantizadas</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Item 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col justify-between shadow-md hover:shadow-xl transition-all">
+<div class="aspect-square w-full rounded-lg bg-cover bg-center mb-space-sm" data-alt="Official Korean K-pop album collector edition packaging with glossy photocards, lyric booklet, and iridescent poster on modern display table." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGnL4fRcS9Hquo39kEVaMrUOvi1A2nUmZT3nn7HIQI679EgdMCXUjUJdumfI4QKixdJSVnODLVOly92yDe3FuxzhH3HmdSyoBn0rtLy-xcCjuGj8AiHDTDA860CQl87EPTiefLrZgEWMwFQGG5wOeEFP93sN_xr-zgqb6gnNHeWPtlmwKaOzFBKMkglu-V_oXLQQdLjl9zc0LRsdOK11Sc7BzQaCdFboXadwlUxHSdy9aQFd8JGON7Dw')"></div>
+<div class="flex flex-col gap-1">
+<span class="font-label-badge text-label-badge text-primary">Coleccionable Oficial</span>
+<h4 class="font-headline-sm text-body-md font-bold text-on-surface">Álbum Oficial OST + Photocards</h4>
+<p class="font-body-sm text-label-badge text-on-surface-variant">Edición Deluxe limitada de Doramas 2024</p>
+<div class="flex items-center justify-between mt-space-sm">
+<span class="font-headline-md text-headline-md font-extrabold text-tertiary">$28.99</span>
+<a class="px-space-md py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors" href="#">
+              Ver en Tienda ↗
+            </a>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col justify-between shadow-md hover:shadow-xl transition-all">
+<div class="aspect-square w-full rounded-lg bg-cover bg-center mb-space-sm" data-alt="Korean snack box assortment filled with authentic spicy ramen packs, sweet choco pies, tteokbokki crisps, and banana milk carton." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD1XBKYfQw-DosEEibG4Z5VvaaGxrYrn72CP2nxmTHkoDEJ_seu91xPS25eld7HSPEqn_5tbhb5aj5ogvpHsZG_21Rv6DV7LNMfkqRQrdtDwWI_jMdtQdQoi7ZFcvfAhoBcGGA4z6Qj9Mxaqgq-B1TY9QAN1E27KSuwiyzvRyxg37sXSwqhwEO06CUd2iQQLMGXb3g5K2i9ZeLcVNpy7Vq3GOdEqZawC9KhzM6_AJCPNdnu9m9CCE5LBg')"></div>
+<div class="flex flex-col gap-1">
+<span class="font-label-badge text-label-badge text-primary">Gastronomía Asiática</span>
+<h4 class="font-headline-sm text-body-md font-bold text-on-surface">K-Box: Ramen &amp; Snacks Coreanos</h4>
+<p class="font-body-sm text-label-badge text-on-surface-variant">15 variedades auténticas importadas de Seúl</p>
+<div class="flex items-center justify-between mt-space-sm">
+<span class="font-headline-md text-headline-md font-extrabold text-tertiary">$19.99</span>
+<a class="px-space-md py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors" href="#">
+              Ver en Tienda ↗
+            </a>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col justify-between shadow-md hover:shadow-xl transition-all">
+<div class="aspect-square w-full rounded-lg bg-cover bg-center mb-space-sm" data-alt="Modern interactive language learning laptop screen displaying colorful Korean Hangul alphabet study guide with headphones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8LKGSy50OxUvS3_gi8E9Up6xDolahQd8onDyh0MRdkHrYly3pS6CfR2T0vmwostBC-IjhBg0vNaeIwJjPCkzVk5KRm4yFagdJa7SktVazGUlP0PN1B3DEWqDiL72rLHc-w_zvYuLIYHxJn1nj9brpiDASBP4TLDiEOeoRa2ZwB1Zd5m6xYnK0s-E9FNsyL-Oq3lJ3tQie_TLAreg5sIKaZTaxfmUvuzk2LYpGAB09WdtZIjkH_g3IXA')"></div>
+<div class="flex flex-col gap-1">
+<span class="font-label-badge text-label-badge text-secondary">Educación Online</span>
+<h4 class="font-headline-sm text-body-md font-bold text-on-surface">Curso Intensivo de Coreano Hangul</h4>
+<p class="font-body-sm text-label-badge text-on-surface-variant">Aprende a leer y hablar en 30 lecciones prácticas</p>
+<div class="flex items-center justify-between mt-space-sm">
+<span class="font-headline-md text-headline-md font-extrabold text-tertiary">$14.99</span>
+<a class="px-space-md py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors" href="#">
+              Ver en Tienda ↗
+            </a>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col justify-between shadow-md hover:shadow-xl transition-all">
+<div class="aspect-square w-full rounded-lg bg-cover bg-center mb-space-sm" data-alt="Detailed painted collectible action figure of handsome warrior in ancient Joseon celestial robes with translucent mystical sword effect." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDF04Fjoi1hsord6SqMJ7pIUy9gbfPBAUuyIsxUpwRFOX8TwmrJHs2k1FNDwTzQF6QAJuPGCZQjvQQeyLBw6ji4a8qYMzotYX4K7QmKkUgHcAWamWgIlakR9FMsAHMC-Ngd9wDL_AMDyS08g1FxTvOKB50MwVAcg_pAHmpvjm9vS1SR-KMBBuIoNW59l9CMpey8sMpouFT30NdR9UD1d2PTVR0RRSpmZR4Lnjqskwq2oaFPShwZrzJKhw')"></div>
+<div class="flex flex-col gap-1">
+<span class="font-label-badge text-label-badge text-primary">Figura Coleccionable</span>
+<h4 class="font-headline-sm text-body-md font-bold text-on-surface">Figura Drama de Fantasía 1/8</h4>
+<p class="font-body-sm text-label-badge text-on-surface-variant">Pintada a mano con base iluminada LED</p>
+<div class="flex items-center justify-between mt-space-sm">
+<span class="font-headline-md text-headline-md font-extrabold text-tertiary">$34.50</span>
+<a class="px-space-md py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors" href="#">
+              Ver en Tienda ↗
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 12. SECCIÓN 'ACTORES Y ACTRICES MÁS POPULARES' -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl max-w-7xl mx-auto">
+<div class="flex flex-col gap-space-xs mb-space-md">
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Actores y Actrices Más Populares</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Las estrellas favoritas del público latino y sus obras más representativas.</p>
+</div>
+<!-- Avatar Carousel Ribbon -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-gutter text-center">
+<!-- Actor 1 -->
+<a class="group flex flex-col items-center gap-space-xs" href="#">
+<div class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-primary-container to-secondary-container group-hover:scale-105 transition-transform shadow-lg">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Close up glamorous studio portrait of handsome South Korean actor Cha Eun-woo with subtle warm lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCrHbRoqnl-vW3KpG7c4U8kvdP3QluIJcVGeFemGXXDmqRznTBBYVs23EY-gY2vy77BtP1LQVHmcToGhKgLyK-FwhxxDnUw22OqBEVcec2aSpKvV2FP3neRX4lzGpg1ZtW1MNUl3p4nTmmqtwmEggYBnayyWkR4J74xwMjmFufeKm9CyiVLxHdsc9SNAcm1-Fw0zkmSNX8OQQpYm8CDG1btKR7aUx8sVik9m7iet52887sp5-bDm5JDA')"></div>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">Cha Eun-woo</h4>
+<span class="font-label-badge text-label-badge text-primary">True Beauty</span>
+<span class="font-body-sm text-label-badge text-on-surface-variant">42.8M fans</span>
+</a>
+<!-- Actor 2 -->
+<a class="group flex flex-col items-center gap-space-xs" href="#">
+<div class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-primary-container to-secondary-container group-hover:scale-105 transition-transform shadow-lg">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="High fashion portrait of South Korean actress Song Hye-kyo with sleek dark bob and sophisticated intense gaze." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8BOpkFxJlIMcYRd_tkdhvH7RYjgRf156XrK27rEll7ibJ2u6uOxTxTyq5TTQmfYTYlCDY7MV7sDlPpNDtvix_RurekvYnZrPCDOHTKDa0sH3qJigJUKcLj_WsLceIQ_TjwOoUmb3VMTssjfstVEYHPbfpDF4mm2yZlSJvI8hNsvrlB5Yk9BkA1sNyur65latgKSraefhNKmqt4NCk7ERZ5lwuB9wL67yfzDqX9a-l2hU6Jqt_7DTdLw')"></div>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">Song Hye-kyo</h4>
+<span class="font-label-badge text-label-badge text-primary">The Glory</span>
+<span class="font-body-sm text-label-badge text-on-surface-variant">17.2M fans</span>
+</a>
+<!-- Actor 3 -->
+<a class="group flex flex-col items-center gap-space-xs" href="#">
+<div class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-primary-container to-secondary-container group-hover:scale-105 transition-transform shadow-lg">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Striking studio portrait of handsome Korean actor Song Kang with moody editorial neon lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBeLZVkxuR4oe87-YomxIj58i88eZx__6cwW6la8CR_2ODY49H5T3Uzu1JbrWOL7uK3v6GbOALWRDFb9v1CXCnq3dvOwLpsRXVif_8Gszyiyebhja4pyFeRjcEwHKbtCTS2BM8rJFqDOGC9TYPzDLtdIxpKj8OePnxs-ml3Ttcg9aosyzf_qsuqlAurNbiS6DG1JnlbcAobjdHhq4xJBdumHCpa67JE6yEfaBsJxFi0F35Q_HoIA2H8Qg')"></div>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">Song Kang</h4>
+<span class="font-label-badge text-label-badge text-primary">My Demon</span>
+<span class="font-body-sm text-label-badge text-on-surface-variant">22.4M fans</span>
+</a>
+<!-- Actor 4 -->
+<a class="group flex flex-col items-center gap-space-xs" href="#">
+<div class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-primary-container to-secondary-container group-hover:scale-105 transition-transform shadow-lg">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Bright charming portrait of actress Park Eun-bin with warm radiant smile and modern natural makeup." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBL1fATVaM0Eyf4bPfKRyTUuwjgPMGns0CNM66WMU_SfLntHfes9qd8-OlQs9W5naa8Hea4jI35oS4sxPCoF0i-puXhln4EyOQzey4QROnEpIJbMzsPX3ft-K525E0swSxMNgpOssMrjAnbZTnKn5DPqQQ1xC81lY-Z6xzJNPD_VAp3wqXJ-jzhw_-HKRHUYxUaP-LQh8AdDRUF-0kuG4F4FHBNxdV1_yMISVM7sRqycrjFQAuOwUDYA')"></div>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">Park Eun-bin</h4>
+<span class="font-label-badge text-label-badge text-primary">Attorney Woo</span>
+<span class="font-body-sm text-label-badge text-on-surface-variant">12.1M fans</span>
+</a>
+<!-- Actor 5 -->
+<a class="group flex flex-col items-center gap-space-xs" href="#">
+<div class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-primary-container to-secondary-container group-hover:scale-105 transition-transform shadow-lg">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Classic portrait of famous South Korean Hallyu actor Lee Min-ho in tailored black suit against elegant dark background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgntwnYVnLMkzQXMZ5gML-kdql4KupIFyMWpgJEv1VjKX4OqNnFXJ6Y3gjJ4IlkPgyfwAM8QYFXpxIU1HSf0FqbcPLpTcoMNLImitWwvVN3KbEKY4dzwL3q2_hM6jfwUMDnUB6s_8eZv_8lY21wvAt-_LHSeVjOSrrW9_OdNnWo8wY3FqHWqOOsFpckLVZ8NLZkFOaHziOUi_udeH3qKr0u13ldcWFgdprRbJKkEZJZZIsMSm6h56IvA')"></div>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">Lee Min-ho</h4>
+<span class="font-label-badge text-label-badge text-primary">Boys Over Flowers</span>
+<span class="font-body-sm text-label-badge text-on-surface-variant">35.9M fans</span>
+</a>
+<!-- Actor 6 -->
+<a class="group flex flex-col items-center gap-space-xs" href="#">
+<div class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-primary-container to-secondary-container group-hover:scale-105 transition-transform shadow-lg">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Ethereal portrait of Korean superstar singer and actress IU Lee Ji-eun in romantic vintage gown under soft starlight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBskjk8DEZbA6FQmf3CpCbiZYNNdBOTRhLQf2e-Y5hVj5eGSAhIw6ztkyaRlAJnwWVClx-2qiDIL6Koty3zUILKV3zfatIteFMTF1QaGNjK5B8bGlJQHrva2yD3USBMEWLJoIV8DvaT9rpCzF9r3ISPs9yTfhnHxNKUuZJ70v2hPhDNSEussC2BtSHKTG4aJceFRM9B8ZkZsxZEwlggGEYCZccFfpFK9ecQfotCS1DayJW-3ciPRib6_Q')"></div>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">IU / Lee Ji-eun</h4>
+<span class="font-label-badge text-label-badge text-primary">Hotel Del Luna</span>
+<span class="font-body-sm text-label-badge text-on-surface-variant">33.5M fans</span>
+</a>
+</div>
+</section>
+<!-- 13. BANNER 'APÓYANOS' / DONACIONES -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-md max-w-7xl mx-auto">
+<div class="p-space-lg rounded-2xl bg-gradient-to-r from-surface-container via-surface-container-high to-surface-container flex flex-col lg:flex-row items-center justify-between gap-space-md shadow-xl">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-tertiary-container/30 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[32px]">favorite</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">¿Te encanta nuestro proyecto? Ayúdanos a mantener los servidores online</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">
+            DoramaLat es un proyecto gestionado con amor para la comunidad. Cada donación apoya la infraestructura de ancho de banda y subtituladores voluntarios.
+          </p>
+<div class="flex items-center gap-space-sm mt-space-xs font-label-badge text-label-badge text-secondary">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">shield</span> Insignia de Colaborador en tu Perfil</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">stars</span> Rol VIP Especial en Discord</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<a class="px-space-md py-space-sm rounded-full bg-[#ff5f5f]/20 hover:bg-[#ff5f5f]/30 text-primary font-label-md text-label-md font-bold flex items-center gap-1.5 transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">coffee</span> Invítanos un Ko-fi
+        </a>
+<a class="px-space-md py-space-sm rounded-full bg-tertiary-container/40 hover:bg-tertiary-container/60 text-tertiary font-label-md text-label-md font-bold flex items-center gap-1.5 transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">local_cafe</span> Buy Me a Coffee
+        </a>
+</div>
+</div>
+</section>
+<!-- 14. SECCIÓN 'ÚNETE A NUESTRA GRAN COMUNIDAD' -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl max-w-7xl mx-auto">
+<div class="relative rounded-2xl overflow-hidden bg-gradient-to-tr from-surface-container-lowest via-surface-container-high to-surface-container p-space-lg lg:p-space-xl text-center shadow-2xl">
+<div class="max-w-2xl mx-auto flex flex-col items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded-full bg-secondary-container/40 text-secondary font-label-badge text-label-badge font-bold uppercase tracking-wider">
+          Comunidad Fan #1 en Español
+        </span>
+<h2 class="font-headline-xl text-headline-xl-mobile lg:text-headline-xl font-extrabold text-on-surface tracking-tight">
+          Más de 150,000 Amantes de Doramas Conectados
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Debate las teorías del último episodio, vota por los próximos dramas a doblar y recibe notificaciones instantáneas antes que nadie.
+        </p>
+<!-- Channels CTA Row -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm w-full mt-space-md">
+<a class="p-space-md rounded-xl bg-surface-container hover:bg-surface-variant flex flex-col items-center gap-space-xs transition-all shadow-md group" href="#">
+<span class="w-12 h-12 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">forum</span>
+</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Discord Oficial</span>
+<span class="font-body-sm text-label-badge text-on-surface-variant">45,000+ miembros activos</span>
+</a>
+<a class="p-space-md rounded-xl bg-surface-container hover:bg-surface-variant flex flex-col items-center gap-space-xs transition-all shadow-md group" href="#">
+<span class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">send</span>
+</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Canal Telegram</span>
+<span class="font-body-sm text-label-badge text-on-surface-variant">Alertas de estrenos 24/7</span>
+</a>
+<button class="p-space-md rounded-xl bg-surface-container hover:bg-surface-variant flex flex-col items-center gap-space-xs transition-all shadow-md group" id="web-notif-btn" onclick="this.innerHTML='&lt;span class=\'material-symbols-outlined text-primary text-[18px]\'&gt;check_circle&lt;/span&gt; ¡Notificaciones Activadas!';">
+<span class="w-12 h-12 rounded-full bg-tertiary-container/30 flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">notifications_active</span>
+</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Notificaciones Web</span>
+<span class="font-body-sm text-label-badge text-on-surface-variant">Un clic para activar</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-xl mt-space-xl shadow-[0_-4px_20px_rgba(0,0,0,0.3)]"><div class="w-full px-margin-mobile lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-space-xl"><div class="md:col-span-1 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="DoramaLat Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XtgHUCuZANtHKriRj2cPhVloJJFe-nv3hWm5TUg5qyI1dEH_ihhX3rfK246m8ga_gcU-OW0Y3qCWG0TgwFYjGGWXofxj95IQhRTodWC7seiDyGrqyYaB5ScbRePcRParUMG18mRC6hf3sAMAxtoEiuHdeeQ5pbMwH2L2XJ9lYCPQaIJWi1BMDFDkOd6EqhiF2Bjgxu0kF9hXTh9t9ovwQuZtdsczmVoZEkMflBQGH5s_OfA4HUGi4jt6A9"/><span class="font-headline-md text-headline-md font-bold text-on-surface">Dorama<span class="text-primary">Lat</span></span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Tu plataforma de streaming favorita de doramas coreanos, dramas asiáticos y anime con doblaje y subtítulos en Español Latino.</p></div><div class="flex flex-col gap-space-xs"><h4 class="font-label-lg text-label-lg text-on-surface font-bold mb-space-xs uppercase tracking-wider">Navegación</h4><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="inicio" href="#">Inicio</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="generos" href="#">Géneros Populares</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="paises" href="#">K-Dramas &amp; C-Dramas</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="calendario" href="#">Calendario de Emisión</a></div><div class="flex flex-col gap-space-xs"><h4 class="font-label-lg text-label-lg text-on-surface font-bold mb-space-xs uppercase tracking-wider">Membresía</h4><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-space-xs" data-path="planes-premium" href="#">Planes Premium <span class="px-1.5 py-0.5 rounded bg-primary-container text-on-surface font-label-badge text-label-badge">VIP</span></a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="faq" href="#">Preguntas Frecuentes</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contacto" href="#">Centro de Ayuda y Contacto</a></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Comunidad</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Únete a nuestra comunidad de fans de dramas en redes sociales.</p><div class="flex items-center gap-space-sm"><a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all" href="#"><span class="material-symbols-outlined text-[20px]">forum</span></a><a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all" href="#"><span class="material-symbols-outlined text-[20px]">send</span></a><a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all" href="#"><span class="material-symbols-outlined text-[20px]">play_circle</span></a><a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container-lowest"><p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left">© 2024 DoramaLat. Todos los derechos reservados. No almacenamos archivos en nuestros servidores; todo el contenido es proporcionado por terceros no afiliados.</p><div class="flex items-center gap-space-md"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terminos" href="#">Términos de Servicio</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#">Privacidad</a></div></div></div></footer></body></html>
